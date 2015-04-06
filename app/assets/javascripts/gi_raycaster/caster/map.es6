@@ -6,8 +6,8 @@ export default class Map {
   constructor(size) {
     this.size = size;
     this.wallGrid = new Uint8Array(size * size);
-    this.skybox = new Bitmap('gi_raycaster/deathvalley_panorama.jpg', 2000, 750);
-    this.wallTexture = new Bitmap('gi_raycaster/wall_texture.jpg', 1024, 1024);
+    this.skybox = new Bitmap('assets/gi_raycaster/deathvalley_panorama.jpg', 2000, 750);
+    this.wallTexture = new Bitmap('assets/gi_raycaster/wall_texture.jpg', 1024, 1024);
     this.light = 0;
   }
 

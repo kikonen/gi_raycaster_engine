@@ -2,6 +2,7 @@
 
 import MOBILE from './common';
 import Controls from './controls';
+import Map from './map';
 import Player from './player';
 import Camera from './camera';
 import GameLoop from './game_loop';

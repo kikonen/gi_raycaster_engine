@@ -8,7 +8,7 @@ export default class Player {
     this.x = x;
     this.y = y;
     this.direction = direction;
-    this.weapon = new Bitmap('gi_raycaster/knife_hand.png', 319, 320);
+    this.weapon = new Bitmap('assets/gi_raycaster/knife_hand.png', 319, 320);
     this.paces = 0;
   }
 
