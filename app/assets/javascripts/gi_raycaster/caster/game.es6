@@ -1,6 +1,6 @@
 "use strict";
 
-import MOBILE from './common';
+import { MOBILE } from './common';
 import Controls from './controls';
 import Map from './map';
 import Player from './player';

@@ -1,7 +1,6 @@
 "use strict";
 
-import MOBILE from './common';
-import CIRCLE from './common';
+import { MOBILE, CIRCLE } from './common';
 
 export default class Camera {
   constructor(canvas, resolution, focalLength) {

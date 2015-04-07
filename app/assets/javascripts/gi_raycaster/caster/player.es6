@@ -1,6 +1,6 @@
 "use strict";
 
-import CIRCLE from './common';
+import { CIRCLE } from './common';
 import Bitmap from './bitmap';
 
 export default class Player {
