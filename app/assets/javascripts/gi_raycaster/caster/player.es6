@@ -1,6 +1,8 @@
 "use strict";
 
 import { CIRCLE } from './common';
+import RES from './resources';
+
 import Bitmap from './bitmap';
 
 export default class Player {
@@ -8,7 +10,7 @@ export default class Player {
     this.x = x;
     this.y = y;
     this.direction = direction;
-    this.weapon = new Bitmap('assets/gi_raycaster/knife_hand.png', 319, 320);
+    this.weapon = new Bitmap(RES.weapon, 319, 320);
     this.paces = 0;
   }
 

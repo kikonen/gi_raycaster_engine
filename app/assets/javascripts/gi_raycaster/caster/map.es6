@@ -1,15 +1,16 @@
 "use strict";
 
+import RES from './resources';
 import Bitmap from './bitmap';
 
 export default class Map {
   constructor(size) {
     this.size = size;
     this.wallGrid = new Uint8Array(size * size);
-    this.skybox = new Bitmap('assets/gi_raycaster/deathvalley_panorama.jpg', 2000, 750);
+    this.skybox = new Bitmap(RES.skybox, 2000, 750);
     this.wallTextures = [
-      new Bitmap('assets/gi_raycaster/wall_texture.jpg', 1024, 1024),
-      new Bitmap('assets/gi_raycaster/kari.jpg', 476, 499),
+      new Bitmap(RES.wall_1, 1024, 1024),
+      new Bitmap(RES.wall_2, 476, 499),
     ];
     this.light = 0;
   }
