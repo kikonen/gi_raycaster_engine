@@ -7,7 +7,10 @@ export default class Map {
     this.size = size;
     this.wallGrid = new Uint8Array(size * size);
     this.skybox = new Bitmap('assets/gi_raycaster/deathvalley_panorama.jpg', 2000, 750);
-    this.wallTexture = new Bitmap('assets/gi_raycaster/wall_texture.jpg', 1024, 1024);
+    this.wallTextures = [
+      new Bitmap('assets/gi_raycaster/wall_texture.jpg', 1024, 1024),
+      new Bitmap('assets/gi_raycaster/kari.jpg', 476, 499),
+    ];
     this.light = 0;
   }
 
@@ -20,7 +23,10 @@ export default class Map {
 
   randomize() {
     for (var i = 0; i < this.size * this.size; i++) {
-      this.wallGrid[i] = Math.random() < 0.3 ? 1 : 0;
+      this.wallGrid[i] = 0;
+      if (Math.random() < 0.3) {
+        this.wallGrid[i] = Math.random() < 0.5 ? 1 : 2;
+      }
     }
   }
 
@@ -57,7 +63,11 @@ export default class Map {
     function inspect(step, shiftX, shiftY, distance, offset) {
       var dx = cos < 0 ? shiftX : 0;
       var dy = sin < 0 ? shiftY : 0;
-      step.height = self.get(step.x - dx, step.y - dy);
+      var wallType = self.get(step.x - dx, step.y - dy);
+      if (wallType > 0) {
+        step.wallType = wallType;
+      }
+      step.height = step.wallType ? 1 : 0;
       step.distance = distance + Math.sqrt(step.length2);
       if (shiftX) {
         step.shading = cos < 0 ? 2 : 0;

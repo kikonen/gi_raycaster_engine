@@ -59,7 +59,6 @@ export default class Camera {
 
   drawColumn(column, ray, angle, map) {
     var ctx = this.ctx;
-    var texture = map.wallTexture;
     var left = Math.floor(column * this.spacing);
     var width = Math.ceil(this.spacing);
     var hit = -1;
@@ -72,6 +71,7 @@ export default class Camera {
       var rain = (rainDrops > 0) && this.project(0.1, angle, step.distance);
 
       if (s === hit) {
+        var texture = map.wallTextures[step.wallType - 1];
         var textureX = Math.floor(texture.width * step.offset);
         var wall = this.project(step.height, angle, step.distance);
 
