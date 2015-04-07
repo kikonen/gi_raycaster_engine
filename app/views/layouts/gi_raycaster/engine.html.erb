@@ -4,9 +4,12 @@
 
 <% content_for :javascripts do %>
   <%= javascript_include_tag  "gi_raycaster/engine" %>
+  <%= javascript_include_tag  "gi_raycaster/caster/module" %>
 <% end %>
 
 <% content_for :head do %>
+  <title>Raycaster Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <% end %>
 
 <%= render template: "layouts/application" %>
