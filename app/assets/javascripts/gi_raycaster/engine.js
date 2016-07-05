@@ -1,3 +1,5 @@
-//=require ./boot
-//=require_self
-System.get('gi_raycaster/boot');
+//= require_self
+jQuery(function() {
+  "use strict";
+  gi.initModule('gi_raycaster/caster/game');
+});
