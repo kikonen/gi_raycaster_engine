@@ -10,7 +10,4 @@ module GiRaycaster
 end
 
 module GiRaycaster
-  def self.config
-    @config ||= RailsConfig.load_files(RailsConfig.setting_files("#{self.gem_root_dir}/config", Rails.env))
-  end
 end
