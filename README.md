@@ -8,4 +8,4 @@ _NOTE_ This is not my original code, but rather copy of [A first-person engine i
 
 Live demo
 
-http://host.kari.dy.fi/gi_raycaster
+http://host.ikari.fi/gi_raycaster
