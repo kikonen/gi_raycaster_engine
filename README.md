@@ -3,9 +3,3 @@
 ## Disclaimer
 
 _NOTE_ This is not my original code, but rather copy of [A first-person engine in 265 lines](http://www.playfuljs.com/a-first-person-engine-in-265-lines/). Only difference is that I've converted code into Ecmascript 6 and added support for multiple wall types. Also converted assets to use rails assets pipeline.
-
-## Demo
-
-Live demo
-
-http://host.ikari.fi/gi_raycaster
